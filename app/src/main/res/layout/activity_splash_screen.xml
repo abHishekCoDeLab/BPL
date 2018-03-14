@@ -53,19 +53,7 @@
 
              -->
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="32dp"
-                android:layout_marginBottom="32dp"
-                android:text="Admin"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:id="@+id/Admin"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-condensed"/>
+
 
         </RelativeLayout>
 

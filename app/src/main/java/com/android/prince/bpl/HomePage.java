@@ -13,6 +13,7 @@ public class HomePage extends AppCompatActivity {
     Button squads;
     Button matchInfo;
     Button registerPlayer;
+    Button auxion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class HomePage extends AppCompatActivity {
         squads = (Button)findViewById(R.id.SquadsButton);
         matchInfo = (Button)findViewById(R.id.MatchInfoButton);
         registerPlayer = (Button)findViewById(R.id.RegisteredButton);
+        auxion = (Button)findViewById(R.id.AdminHomePage);
 
         squads.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,13 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                   startActivity(new Intent(HomePage.this,LeaderBoard.class));
+            }
+        });
+
+        auxion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomePage.this,AuxionList.class));
             }
         });
 

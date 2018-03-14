@@ -26,7 +26,7 @@ public class AuxionList extends AppCompatActivity{
     private ArrayList<String> nameListArray = new ArrayList<>();
     private ArrayList<String> specListArray = new ArrayList<>();
     private ArrayList<String> priceListArray = new ArrayList<>();
-    private ArrayList<Integer> imageListArray = new ArrayList<>();
+    private ArrayList<String> imageListArray = new ArrayList<>();
 
     private DatabaseReference auxionListRef;
 
@@ -52,7 +52,7 @@ public class AuxionList extends AppCompatActivity{
                         intent.putExtra("NAME",nameListArray.get(position));
                         intent.putExtra("SPEC",specListArray.get(position));
                         intent.putExtra("PRICE",priceListArray.get(position));
-//                        intent.putExtra("IMAGE",String.valueOf(imageListArray.get(position)));
+                        intent.putExtra("IMAGE",imageListArray.get(position));
 
                         startActivity(intent);
                     }
@@ -116,11 +116,13 @@ public class AuxionList extends AppCompatActivity{
                             priceListArray.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("Spec")){
                             specListArray.add(child.getValue().toString());
+                        }else if(child.getKey().equalsIgnoreCase("Image")){
+                            imageListArray.add(child.getValue().toString());
                         }
                     }
 
                     if(specListArray != null) {
-                        AuxionAdapter auxionAdapter = new AuxionAdapter(AuxionList.this, nameListArray, specListArray, priceListArray);
+                        AuxionAdapter auxionAdapter = new AuxionAdapter(AuxionList.this, nameListArray, specListArray, priceListArray,imageListArray);
                         recyclerView.setAdapter(auxionAdapter);
                     }
 

@@ -92,6 +92,20 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"/>
 
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="Auxion"
+                    android:id="@+id/AdminHomePage"
+                    android:background="@drawable/buttonstyle"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
             </LinearLayout>
 
         </ScrollView>

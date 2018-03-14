@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.prince.bpl.R;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -21,14 +22,16 @@ public class AuxionAdapter extends RecyclerView.Adapter<AuxionAdapter.AuxionCust
     private ArrayList<String> nameListArray;
     private ArrayList<String> specListArray;
     private ArrayList<String> priceListArray;
-    private ArrayList<Integer> imageListArray;
+    private ArrayList<String> imageListArray;
 
-    public AuxionAdapter(Context context,ArrayList<String> name,ArrayList<String> spec,ArrayList<String> price/*,ArrayList<Integer> image*/){
+    Context context ;
+
+    public AuxionAdapter(Context context,ArrayList<String> name,ArrayList<String> spec,ArrayList<String> price,ArrayList<String> image){
         nameListArray = name;
         specListArray = spec;
         priceListArray = price;
-       // imageListArray = image;
-
+        imageListArray = image;
+        this.context = context;
     }
 
 
@@ -46,13 +49,13 @@ public class AuxionAdapter extends RecyclerView.Adapter<AuxionAdapter.AuxionCust
         String nameStr = nameListArray.get(position);
         String specStr = specListArray.get(position);
         String priceStr = priceListArray.get(position);
-//        int imageInt = imageListArray.get(position);
+        String imageStr = imageListArray.get(position);
 
             holder.name.setText(nameStr);
             holder.price.setText("Base Price : "+priceStr);
             holder.spec.setText(specStr);
 
-         //   holder.profileImage.setImageResource(imageInt);
+            Glide.with(context).load(imageStr).into(holder.profileImage);
 
     }
 

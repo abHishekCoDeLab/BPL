@@ -21,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".TeamList"
             android:theme="@style/AppTheme.nobar" />
@@ -37,14 +36,19 @@
         <activity
             android:name=".ScoreCard"
             android:theme="@style/AppTheme.nobar" />
-        <activity android:name=".RegisterPlayer"
-            android:theme="@style/AppTheme.nobar"/>
-        <activity android:name=".LeaderBoard"
-            android:theme="@style/AppTheme.nobar"/>
-
-
-        <activity android:name=".AuxionList" />
-        <activity android:name=".PlayerInfo" />
+        <activity
+            android:name=".RegisterPlayer"
+            android:theme="@style/AppTheme.nobar" />
+        <activity
+            android:name=".LeaderBoard"
+            android:theme="@style/AppTheme.nobar" />
+        <activity
+            android:name=".AuxionList"
+            android:theme="@style/AppTheme.nobar" />
+        <activity
+            android:name=".PlayerInfo"
+            android:theme="@style/AppTheme.nobar" />
+        <activity android:name=".SoldActivity"></activity>
     </application>
 
 </manifest>

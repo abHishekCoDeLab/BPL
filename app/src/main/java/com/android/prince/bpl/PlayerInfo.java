@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class PlayerInfo extends AppCompatActivity {
 
     String name;
@@ -57,7 +59,8 @@ public class PlayerInfo extends AppCompatActivity {
         priceTextView.setText(String.valueOf(playerSellPrice));
         currentBid.setText(String.valueOf(playerSellPrice));
         specTextView.setText(spec);
-        profileImageView.setImageResource(Integer.parseInt(image));
+
+        Glide.with(PlayerInfo.this).load(image).into(profileImageView);
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
