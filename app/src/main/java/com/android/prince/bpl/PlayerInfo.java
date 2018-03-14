@@ -74,13 +74,18 @@ public class PlayerInfo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(PlayerInfo.this,SoldActivity.class);
+                intent.putExtra("MONEY",playerSellPrice);
+                startActivity(intent);
+                finish();
             }
         });
 
         unsold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(PlayerInfo.this,AuxionList.class));
+                finish();
             }
         });
 

@@ -48,7 +48,9 @@
         <activity
             android:name=".PlayerInfo"
             android:theme="@style/AppTheme.nobar" />
-        <activity android:name=".SoldActivity"></activity>
+
+        <activity android:name=".SoldActivity"
+            android:theme="@style/AppTheme.nobar"/>
     </application>
 
 </manifest>

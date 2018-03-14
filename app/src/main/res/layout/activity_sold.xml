@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.prince.bpl.SoldActivity">
+    tools:context="com.android.prince.bpl.SoldActivity"
+    android:background="@color/cricbuzz">
 
-</android.support.constraint.ConstraintLayout>
+    <Spinner
+        android:id="@+id/TeamSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:text="Money Left : "
+        android:textAlignment="center"
+        android:layout_below="@id/TeamSpinner"
+        android:layout_marginTop="32dp"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:id="@+id/MoneyLeft"/>
+
+    <Button
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_arrow_forward_black_24dp"
+        android:id="@+id/Forward"/>
+
+</RelativeLayout>
