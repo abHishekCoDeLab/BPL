@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.prince.bpl.LeaderBoard"
+    android:background="#ffffff">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:id="@+id/ToolBarMatchDetail"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:textColor="#ffffff"
+            android:paddingTop="8dp"
+            android:text="Points Table"
+            android:layout_marginLeft="2dp"
+            android:textSize="32sp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:text="S.No."
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:text="Team Name"
+                android:layout_marginLeft="22dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="Points"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"
+                android:layout_marginRight="16dp"
+                android:textAlignment="textEnd"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/TeamPointList"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

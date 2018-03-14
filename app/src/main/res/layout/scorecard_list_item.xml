@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TeamWonComment"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Archer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_column="1"
+                android:id="@+id/NamePlayed"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:text="65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_column="2"
+                android:layout_marginRight="32dp"
+                android:id="@+id/RPlayed"
+                android:textAlignment="viewStart"/>
+
+            <TextView
+                android:text="99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_column="3"
+                android:layout_marginRight="32dp"
+                android:id="@+id/BPlayed"
+                android:textAlignment="viewStart"/>
+
+            <TextView
+                android:text="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_column="4"
+                android:layout_marginRight="32dp"
+                android:id="@+id/SrPlayed"
+                android:textAlignment="viewStart"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

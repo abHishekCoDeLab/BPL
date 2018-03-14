@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Team Name"
+            android:layout_marginLeft="22dp"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="4dp"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:id="@+id/TeamNameList" />
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

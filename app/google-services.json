@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "641843663332",
+    "firebase_url": "https://birlapremeirleague.firebaseio.com",
+    "project_id": "birlapremeirleague",
+    "storage_bucket": "birlapremeirleague.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641843663332:android:332cf7869855dce6",
+        "android_client_info": {
+          "package_name": "com.android.prince.bpl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641843663332-5vb3d7ctm5s2qlglv1il758igt9fmo7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.prince.bpl",
+            "certificate_hash": "799e3c96181101e5e6e3ffaad58c351e38490017"
+          }
+        },
+        {
+          "client_id": "641843663332-ciuvljksl6fgc1uuu8rfkvqmicu6rmch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDKq9QozUYNy2ztgyzBS4zAwCSPUmTgmw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641843663332-ciuvljksl6fgc1uuu8rfkvqmicu6rmch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
