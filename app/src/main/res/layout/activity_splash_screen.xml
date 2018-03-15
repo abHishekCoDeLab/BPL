@@ -1,62 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.android.prince.bpl.SplashScreen"
-    android:background="#ffffff">
+    android:background="@color/cricbuzz">
+
+    <ImageView
+        android:layout_width="224dp"
+        android:layout_height="224dp"
+        android:src="@drawable/bpll"
+        android:layout_centerVertical="true"
+        android:id="@+id/BPL"
+        android:layout_marginLeft="8dp"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_width="224dp"
+        android:layout_height="224dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/BPL"
+        android:paddingTop="40dp"
+        android:layout_marginLeft="16dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIRLA"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/bpl"
-                android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREMIER"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed" />
 
-         <!--   <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_above="@id/year"
-                android:text="BPL"
-                android:textAlignment="center"
-                android:textSize="64sp"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="@color/green"
-                android:paddingRight="16dp"
-                android:paddingBottom="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEAGUE"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed"/>
 
-            <TextView
-                android:id="@+id/year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:text="2k18"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="#ffffff"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"/>
-
-             -->
-
-
-
-        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2K18"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed"/>
 
     </LinearLayout>
 
-</LinearLayout>
+
+
+
+</RelativeLayout>

@@ -46,6 +46,7 @@ public class AuxionAdapter extends RecyclerView.Adapter<AuxionAdapter.AuxionCust
     @Override
     public void onBindViewHolder(AuxionCustomViewHolder holder, int position) {
 
+
         String nameStr = nameListArray.get(position);
         String specStr = specListArray.get(position);
         String priceStr = priceListArray.get(position);

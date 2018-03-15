@@ -18,7 +18,7 @@
             android:layout_height="64dp"
             android:textColor="#ffffff"
             android:paddingTop="8dp"
-            android:text="RegisterPlayer"
+            android:text="Registered Player"
             android:layout_marginLeft="2dp"
             android:textSize="32sp"
             android:singleLine="true"

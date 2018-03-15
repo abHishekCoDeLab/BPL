@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.android.prince.bpl", appContext.getPackageName());
+        assertEquals("com.android.prince.bpll", appContext.getPackageName());
     }
 }

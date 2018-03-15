@@ -38,20 +38,28 @@ public class ScoreCard extends AppCompatActivity {
     private ArrayList<String> teamOneSrArrayB = new ArrayList<>();
     private ArrayList<String> teamOneNameArrayB = new ArrayList<>();
 
+    private ArrayList<String> teamOneNameArrayB1 = new ArrayList<>();
+
     private ArrayList<String> teamOneOverArrayW = new ArrayList<>();
     private ArrayList<String> teamOneNameArrayW = new ArrayList<>();
     private ArrayList<String> teamOneRunArrayW = new ArrayList<>();
     private ArrayList<String> teamOneWicketArrayW = new ArrayList<>();
+
+    private ArrayList<String> teamOneNameArrayW1 = new ArrayList<>();
 
     private ArrayList<String> teamTwoRunArrayB = new ArrayList<>();
     private ArrayList<String> teamTwoBallArrayB = new ArrayList<>();
     private ArrayList<String> teamTwoSrArrayB = new ArrayList<>();
     private ArrayList<String> teamTwoNameArrayB = new ArrayList<>();
 
+    private ArrayList<String> teamTwoNameArrayB1 = new ArrayList<>();
+
     private ArrayList<String> teamTwoOverArrayW = new ArrayList<>();
     private ArrayList<String> teamTwoNameArrayW = new ArrayList<>();
     private ArrayList<String> teamTwoRunArrayW = new ArrayList<>();
     private ArrayList<String> teamTwoWicketArrayW = new ArrayList<>();
+
+    private ArrayList<String> teamTwoNameArrayW1 = new ArrayList<>();
 
     private String matchSelected;
     private String teamOne;
@@ -255,10 +263,12 @@ public class ScoreCard extends AppCompatActivity {
                             teamOneRunArrayW.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("wicket")){
                             teamOneWicketArrayW.add(child.getValue().toString());
+                        }else if(child.getKey().equalsIgnoreCase("name")){
+                            teamOneNameArrayW1.add(child.getValue().toString());
                         }
                     }
 
-                    ScoreCardAdapter scoreCardAdapter1w = new ScoreCardAdapter(teamOneNameArrayW,teamOneOverArrayW,teamOneWicketArrayW,teamOneRunArrayW);
+                    ScoreCardAdapter scoreCardAdapter1w = new ScoreCardAdapter(teamOneNameArrayW1,teamOneOverArrayW,teamOneWicketArrayW,teamOneRunArrayW);
                     teamOneWicket.setAdapter(scoreCardAdapter1w);
                 }
 
@@ -291,10 +301,12 @@ public class ScoreCard extends AppCompatActivity {
                             teamOneSrArrayB.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("run")){
                             teamOneRunArrayB.add(child.getValue().toString());
+                        }else if(child.getKey().equalsIgnoreCase("name")){
+                            teamOneNameArrayB1.add(child.getValue().toString());
                         }
                     }
 
-                    ScoreCardAdapter scoreCardAdapter1b = new ScoreCardAdapter(teamOneNameArrayB,teamOneRunArrayB,teamOneBallArrayB,teamOneSrArrayB);
+                    ScoreCardAdapter scoreCardAdapter1b = new ScoreCardAdapter(teamOneNameArrayB1,teamOneRunArrayB,teamOneBallArrayB,teamOneSrArrayB);
                     teamOneRun.setAdapter(scoreCardAdapter1b);
 
                 }
@@ -329,11 +341,13 @@ public class ScoreCard extends AppCompatActivity {
                             teamTwoRunArrayW.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("wicket")){
                             teamTwoWicketArrayW.add(child.getValue().toString());
+                        }else if(child.getKey().equalsIgnoreCase("name")){
+                            teamTwoNameArrayW1.add(child.getValue().toString());
                         }
                     }
 
 
-                    ScoreCardAdapter scoreCardAdapter2w = new ScoreCardAdapter(teamTwoNameArrayW,teamTwoOverArrayW,teamTwoWicketArrayW,teamTwoRunArrayW);
+                    ScoreCardAdapter scoreCardAdapter2w = new ScoreCardAdapter(teamTwoNameArrayW1,teamTwoOverArrayW,teamTwoWicketArrayW,teamTwoRunArrayW);
                     teamTwoWicket.setAdapter(scoreCardAdapter2w);
 
 
@@ -367,11 +381,13 @@ public class ScoreCard extends AppCompatActivity {
                             teamTwoSrArrayB.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("run")){
                             teamTwoRunArrayB.add(child.getValue().toString());
+                        }else if(child.getKey().equalsIgnoreCase("name")){
+                            teamTwoNameArrayB1.add(child.getValue().toString());
                         }
                     }
 
 
-                    ScoreCardAdapter scoreCardAdapter2b = new ScoreCardAdapter(teamTwoNameArrayB,teamTwoRunArrayB,teamTwoBallArrayB,teamTwoSrArrayB);
+                    ScoreCardAdapter scoreCardAdapter2b = new ScoreCardAdapter(teamTwoNameArrayB1,teamTwoRunArrayB,teamTwoBallArrayB,teamTwoSrArrayB);
                     teamTwoRun.setAdapter(scoreCardAdapter2b);
 
                 }

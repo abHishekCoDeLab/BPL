@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -75,7 +76,9 @@ public class PlayerInfo extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(PlayerInfo.this,SoldActivity.class);
-                intent.putExtra("MONEY",playerSellPrice);
+                intent.putExtra("MONEY",String.valueOf(playerSellPrice));
+                intent.putExtra("NAME",name);
+                Log.e("MONEY",String.valueOf(playerSellPrice));
                 startActivity(intent);
                 finish();
             }

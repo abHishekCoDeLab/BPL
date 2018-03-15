@@ -24,6 +24,7 @@ public class RegisterPlayer extends AppCompatActivity {
     private ArrayList<String> specListArray = new ArrayList<>();
     private ArrayList<String> rollListArray = new ArrayList<>();
     private ArrayList<String> imageListArray = new ArrayList<>();
+    private ArrayList<String> nameListArray1 = new ArrayList<>();
 
     private DatabaseReference registerPlayerListRef;
 
@@ -88,7 +89,7 @@ public class RegisterPlayer extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for (DataSnapshot child : dataSnapshot.getChildren()) {
                         if(child.getKey().equalsIgnoreCase("name")){
-
+                            nameListArray1.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("roll")){
                             rollListArray.add(child.getValue().toString());
                         }else if(child.getKey().equalsIgnoreCase("Spec")){
@@ -99,7 +100,7 @@ public class RegisterPlayer extends AppCompatActivity {
                     }
 
                     if(specListArray != null) {
-                        RegisterPlayerAdapter registerPlayerAdapter = new RegisterPlayerAdapter(RegisterPlayer.this, nameListArray, specListArray, rollListArray,imageListArray);
+                        RegisterPlayerAdapter registerPlayerAdapter = new RegisterPlayerAdapter(RegisterPlayer.this, nameListArray1, specListArray, rollListArray,imageListArray);
                         recyclerView.setAdapter(registerPlayerAdapter);
                     }
 

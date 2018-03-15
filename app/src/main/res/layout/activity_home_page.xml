@@ -81,7 +81,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
-                    android:text="Register Player"
+                    android:text="Registered Player"
                     android:id="@+id/RegisteredButton"
                     android:background="@drawable/buttonstyle"
                     android:fontFamily="sans-serif-condensed"
@@ -95,7 +95,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
-                    android:text="Auxion"
+                    android:text="Auction"
                     android:id="@+id/AdminHomePage"
                     android:background="@drawable/buttonstyle"
                     android:fontFamily="sans-serif-condensed"
