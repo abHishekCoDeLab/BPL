@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.prince.bpl.About"
+    android:background="@color/cricbuzz">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Us "
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/Contact"
+        android:layout_marginTop="44dp"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/Contact"
+       android:layout_marginTop="32dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Related To App     : "
+               android:textStyle="normal"
+               android:textSize="16sp"
+               android:layout_marginTop="16dp"
+               android:textColor="@color/white"
+               android:layout_marginLeft="8dp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="+91 7050316935"
+               android:textColor="@color/white"
+               android:layout_marginTop="16dp"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:textAlignment="center"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="+91 9931372228"
+               android:textColor="@color/white"
+               android:layout_marginTop="16dp"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:textAlignment="center"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Related To Match   : "
+               android:textStyle="normal"
+               android:textSize="16sp"
+               android:layout_marginTop="32dp"
+               android:textColor="@color/white"
+               android:layout_marginLeft="8dp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="+91 9661930026"
+               android:textColor="@color/white"
+               android:layout_marginTop="16dp"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:textAlignment="center"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="+91 9931372228"
+               android:textColor="@color/white"
+               android:layout_marginTop="16dp"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:textAlignment="center"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="If you have any query/problem then don't hesitate to contact us"
+               android:textStyle="normal"
+               android:textSize="16sp"
+               android:layout_marginTop="54dp"
+               android:textColor="@color/white"
+               android:textAlignment="center"
+               android:layout_marginLeft="8dp"
+               android:layout_marginRight="8dp" />
+
+       </LinearLayout>
+   </ScrollView>
+
+</RelativeLayout>

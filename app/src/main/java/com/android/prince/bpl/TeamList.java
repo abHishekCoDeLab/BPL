@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.android.prince.bpl.adapter.TeamAdapter;
 import com.google.firebase.database.DataSnapshot;
@@ -25,10 +26,14 @@ public class TeamList extends AppCompatActivity {
 
     private DatabaseReference teamNameRef;
 
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_list);
+
+        progressBar = (ProgressBar)findViewById(R.id.ProgressSquads);
 
         teamNameRef = FirebaseDatabase.getInstance().getReference("SQUADS").child("TEAMNAME");
 
@@ -71,6 +76,7 @@ public class TeamList extends AppCompatActivity {
 
                     TeamAdapter teamAdapter = new TeamAdapter(TeamList.this,nameListArray);
                     if(teamAdapter != null) {
+                        progressBar.setVisibility(View.GONE);
                         recyclerView.setAdapter(teamAdapter);
                     }
                 }

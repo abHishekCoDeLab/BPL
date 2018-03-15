@@ -48,9 +48,10 @@
         <activity
             android:name=".PlayerInfo"
             android:theme="@style/AppTheme.nobar" />
-
-        <activity android:name=".SoldActivity"
-            android:theme="@style/AppTheme.nobar"/>
+        <activity
+            android:name=".SoldActivity"
+            android:theme="@style/AppTheme.nobar" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>

@@ -15,11 +15,6 @@
         android:id="@+id/ButtonLayout"
         android:visibility="visible">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="256dp"
-            android:src="@drawable/bpl"
-            android:scaleType="fitXY"/>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -28,11 +23,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingRight="16dp"
-                android:paddingLeft="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:src="@drawable/bpl"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="16dp"/>
 
 
                 <Button
@@ -46,8 +45,8 @@
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp" />
 
 
                 <Button
@@ -61,8 +60,8 @@
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -75,8 +74,8 @@
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -89,8 +88,8 @@
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -105,6 +104,20 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="Contact Us"
+                    android:id="@+id/AboutUs"
+                    android:background="@drawable/buttonstyle"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"/>
 
             </LinearLayout>
 

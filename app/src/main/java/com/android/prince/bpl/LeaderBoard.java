@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.android.prince.bpl.adapter.PointTableAdapter;
 import com.android.prince.bpl.adapter.TeamAdapter;
@@ -26,10 +28,14 @@ public class LeaderBoard extends AppCompatActivity {
 
     private DatabaseReference tableRef;
 
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leader_board);
+
+        progressBar = (ProgressBar)findViewById(R.id.ProgressPointTable);
 
         tableRef = FirebaseDatabase.getInstance().getReference("POINTTABLE");
 
@@ -58,6 +64,7 @@ public class LeaderBoard extends AppCompatActivity {
 
                     PointTableAdapter pointTableAdapter = new PointTableAdapter(LeaderBoard.this,nameListArray,pointListArray);
                     if(pointTableAdapter != null) {
+                        progressBar.setVisibility(View.GONE);
                         recyclerView.setAdapter(pointTableAdapter);
                     }
                 }

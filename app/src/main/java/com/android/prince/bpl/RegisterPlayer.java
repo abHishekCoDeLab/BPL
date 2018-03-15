@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.android.prince.bpl.adapter.AuxionAdapter;
 import com.android.prince.bpl.adapter.RegisterPlayerAdapter;
@@ -28,10 +30,14 @@ public class RegisterPlayer extends AppCompatActivity {
 
     private DatabaseReference registerPlayerListRef;
 
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_player);
+
+        progressBar = (ProgressBar)findViewById(R.id.ProgressRegister);
 
         recyclerView = (RecyclerView)findViewById(R.id.RegisterPlayerListView);
 
@@ -100,6 +106,7 @@ public class RegisterPlayer extends AppCompatActivity {
                     }
 
                     if(specListArray != null) {
+                        progressBar.setVisibility(View.GONE);
                         RegisterPlayerAdapter registerPlayerAdapter = new RegisterPlayerAdapter(RegisterPlayer.this, nameListArray1, specListArray, rollListArray,imageListArray);
                         recyclerView.setAdapter(registerPlayerAdapter);
                     }

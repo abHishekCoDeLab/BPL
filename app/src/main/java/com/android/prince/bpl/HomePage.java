@@ -14,6 +14,7 @@ public class HomePage extends AppCompatActivity {
     Button matchInfo;
     Button registerPlayer;
     Button auxion;
+    Button about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class HomePage extends AppCompatActivity {
         matchInfo = (Button)findViewById(R.id.MatchInfoButton);
         registerPlayer = (Button)findViewById(R.id.RegisteredButton);
         auxion = (Button)findViewById(R.id.AdminHomePage);
+        about = (Button)findViewById(R.id.AboutUs);
 
         squads.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +60,13 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomePage.this,AuxionList.class));
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomePage.this,About.class));
             }
         });
 

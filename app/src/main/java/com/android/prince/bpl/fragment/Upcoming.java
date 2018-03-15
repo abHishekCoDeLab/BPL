@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.android.prince.bpl.AuxionList;
 import com.android.prince.bpl.R;
@@ -29,6 +30,8 @@ import java.util.ArrayList;
 public class Upcoming extends Fragment {
 
     RecyclerView recyclerView;
+
+    ProgressBar progressBar;
 
     private ArrayList<String> teamOne = new ArrayList<>();
     private ArrayList<String> teamTwo = new ArrayList<>();
@@ -66,6 +69,8 @@ public class Upcoming extends Fragment {
 
         upcomingMatchRef = FirebaseDatabase.getInstance().getReference("MATCHDETAIL").child("UPCOMING");
         new LoadMatch().execute(upcomingMatchRef);
+
+        progressBar = (ProgressBar)getView().findViewById(R.id.ProgressUpcoming);
 
         recyclerView = (RecyclerView)getView().findViewById(R.id.UpcomingRecyclerView);
 
@@ -125,6 +130,7 @@ public class Upcoming extends Fragment {
                             }
                         }
 
+                        progressBar.setVisibility(View.GONE);
                         UpcomingAdapter upcomingAdapter = new UpcomingAdapter(context,teamOne,teamTwo,date);
                         recyclerView.setAdapter(upcomingAdapter);
                     }

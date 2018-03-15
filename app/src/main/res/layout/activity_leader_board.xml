@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.android.prince.bpl.LeaderBoard"
     android:background="#ffffff">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:id="@+id/ToolBarMatchDetail"
+        android:id="@+id/ToolBarPointTable"
         android:background="@color/colorPrimary">
 
         <TextView
@@ -35,7 +34,9 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp">
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/ToolBarPointTable"
+            android:id="@+id/LinearSnoName">
 
             <TextView
                 android:layout_width="32dp"
@@ -77,9 +78,16 @@
             android:layout_height="match_parent"
             android:id="@+id/TeamPointList"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/LinearSnoName">
 
         </android.support.v7.widget.RecyclerView>
 
+    <ProgressBar
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/ProgressPointTable"/>
 
-</LinearLayout>
+
+</RelativeLayout>

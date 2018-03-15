@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -40,12 +41,16 @@ public class AuxionList extends AppCompatActivity{
 
     private DatabaseReference auxionListRef;
 
+    ProgressBar progressBar;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auxion_list);
+
+        progressBar = (ProgressBar)findViewById(R.id.ProgressAuction);
 
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar)findViewById(R.id.ToolBarAuxionList);
         setSupportActionBar(toolbar);
@@ -109,7 +114,6 @@ public class AuxionList extends AppCompatActivity{
             @Override
             public boolean onQueryTextChange(String newText) {
                 if(newText != null && !newText.isEmpty()){
-                    List<String> firstFound = new ArrayList<String>();
                     ArrayList<String> arrayListSearchName = new ArrayList<>();
                     ArrayList<String> arrayListSearchSpec = new ArrayList<>();
                     ArrayList<String> arrayListSearchPrice = new ArrayList<>();
@@ -194,11 +198,8 @@ public class AuxionList extends AppCompatActivity{
                         }
                     }
 
-                    Log.e("Size of price list  : ",String.valueOf(priceListArray.size()));
-                    Log.e("Size of spec list  : ",String.valueOf(specListArray.size()));
-                    Log.e("Size of image list  : ",String.valueOf(imageListArray.size()));
-
                     if(specListArray != null) {
+                        progressBar.setVisibility(View.GONE);
                         AuxionAdapter auxionAdapter = new AuxionAdapter(AuxionList.this, nameListArray1, specListArray, priceListArray,imageListArray);
                         recyclerView.setAdapter(auxionAdapter);
                     }

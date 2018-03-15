@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.prince.bpl.AuxionList;
@@ -42,6 +43,8 @@ public class Recent extends Fragment {
     private ArrayList<String> won = new ArrayList<>();
     private ArrayList<String> noOfMatch = new ArrayList<>();
 
+    ProgressBar progressBar;
+
     Context context;
 
     private DatabaseReference recentMatchRef;
@@ -67,6 +70,8 @@ public class Recent extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         recentMatchRef = FirebaseDatabase.getInstance().getReference("MATCHDETAIL").child("RECENT");
+
+        progressBar = (ProgressBar)getView().findViewById(R.id.ProgressRecent);
 
         recyclerView = (RecyclerView)getView().findViewById(R.id.RecentRecyclerView);
         new LoadMatch().execute(recentMatchRef);
@@ -146,6 +151,7 @@ public class Recent extends Fragment {
                         }
                     }
 
+                    progressBar.setVisibility(View.GONE);
                     RecentAdapter upcomingAdapter = new RecentAdapter(context,teamOne,teamTwo,won);
                     recyclerView.setAdapter(upcomingAdapter);
                 }
