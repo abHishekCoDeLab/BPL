@@ -24,9 +24,6 @@ public class LeaderBoard extends AppCompatActivity {
     private ArrayList<String> nameListArray = new ArrayList<>();
     private ArrayList<String> pointListArray = new ArrayList<>();
 
-    private ArrayList<String> nameListArrayS = new ArrayList<>();
-    private ArrayList<String> pointListArrayS = new ArrayList<>();
-
     private DatabaseReference tableRef;
 
     @Override

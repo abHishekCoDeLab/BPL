@@ -59,7 +59,8 @@ public class SoldActivity extends AppCompatActivity implements AdapterView.OnIte
                 if(teamSelected .equalsIgnoreCase("")){
                     Toast.makeText(SoldActivity.this,"Please,Select the team Name to sold the player ...!!!",Toast.LENGTH_LONG).show();
                 }else {
-                    FirebaseDatabase.getInstance().getReference("TEAMNAME").child(teamSelected).setValue(String.valueOf((Integer.parseInt(moneyLeftStr))-(Integer.parseInt(sellPrice))));
+                    int i = Integer.parseInt(moneyLeftStr)-Integer.parseInt(sellPrice);
+                    FirebaseDatabase.getInstance().getReference("TEAMNAME").child(teamSelected).setValue(String.valueOf(i));
                     startActivity(new Intent(SoldActivity.this,AuxionList.class));
                     finish();
                 }
